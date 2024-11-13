@@ -15,7 +15,7 @@ checkOS() {
         distro_version=$VERSION_ID
     else
         echo "Unable to determine distribution."
-        exit 1
+    #    exit 1
     fi
     # Check if the distribution is supported
     if [[ " ${supported_distros[@]} " =~ " ${distro_name} " ]]; then
@@ -24,7 +24,7 @@ checkOS() {
     else
         # Print error message in red
         echo -e "\e[31mYour Linux distribution (${distro_name} ${distro_version}) is not currently supported.\e[0m"
-        exit 1
+    #    exit 1
     fi
     
     # This script only works on Ubuntu 22 and above
@@ -33,7 +33,7 @@ checkOS() {
         # Check if it's Ubuntu and version is below 22
         if [ "$(lsb_release -is)" == "Ubuntu" ] && [ "$version_info" -lt 22 ]; then
             echo "This script only works on Ubuntu 22 and above"
-            exit
+    #        exit
         fi
     fi
 }
