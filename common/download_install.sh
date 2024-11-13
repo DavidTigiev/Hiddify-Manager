@@ -23,7 +23,7 @@ checkOS() {
         : #no-op command
     else
         # Print error message in red
-        echo -e "\e[31mYour Linux distribution (${distro_name} ${distro_version}) is not currently supported.\e[0m"
+        echo -e "\e[31mYour Linux distribution (${distro_name} ${distro_version}) is not currently supported   43243243.\e[0m"
     #    exit 1
     fi
     
